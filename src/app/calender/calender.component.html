@@ -1,3 +1,20 @@
-<p>calender works!</p>
-<button pButton type="button" label="Click" ></button>
-<p-button label="Click" ></p-button>
+<div class="center">
+    <p>Welcome to the calender component!!! <angular-emojis [name]="'calendar'" size="50"> </angular-emojis>   </p>
+    <p-calendar [(ngModel)]="dateValue" [minDate]="minDateValue"  (click)="check()" [maxDate]="maxDateValue"  [disabledDates]="invalidDates" [readonlyInput]="true"></p-calendar>
+<br>
+----------------------------------------------------------------
+    <div class="dateInfo"> 
+        <div  *ngIf="weekDay" [ngStyle]="{'color': 'blue', 'background-color': '#ddd'}">  Current Date selected is a weekDay
+            <angular-emojis [name]="'anguished'" size="40"> </angular-emojis>
+            <angular-emojis [name]="'face_vomiting'" size="50"> </angular-emojis>    
+            {{dateValue}}    
+        </div> 
+   
+        <div *ngIf="sunday" [ngStyle]="{'background-color': 'red', 'color': 'blue'}">Current Date Selected is Sunday!!! 
+            <angular-emojis [name]="'innocent'" size="40"> </angular-emojis> 
+            <angular-emojis [name]="'heartbeat'" size="50"> </angular-emojis> 
+            <angular-emojis [name]="'gift'" size="60"> </angular-emojis>
+            {{dateValue}} 
+        </div>
+    </div>
+</div>

@@ -9,8 +9,11 @@ import { CalenderComponent } from './calender/calender.component';
 import {CalendarModule} from 'primeng/calendar';
 import { PrimeNGConfig } from 'primeng/api';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import {ButtonModule} from 'primeng/button';
+//emojis
+import { AngularEmojisModule } from 'angular-emojis';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import {ButtonModule} from 'primeng/button';
     BrowserAnimationsModule,
     AppRoutingModule,
     CalendarModule,
-    ButtonModule
+    ButtonModule,
+    FormsModule,
+    AngularEmojisModule
   ],
   providers: [],
   bootstrap: [AppComponent]
